@@ -26,6 +26,9 @@ export class EditComponent implements OnInit {
   }
 
   Editar(){
+    this.alumno.contenido = this.gestionarAlumnoForm.controls.contenido.value;
+    this.alumno.nombre = this.gestionarAlumnoForm.controls.nombre.value;
+    this.alumno.titulo = this.gestionarAlumnoForm.controls.titulo.value;
     let id=localStorage.getItem("id")
     this.service.getAlumnoId(+id)
     .subscribe(data=>{
