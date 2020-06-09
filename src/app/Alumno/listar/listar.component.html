@@ -1,0 +1,32 @@
+<div class="conainer">
+    <div class="card">
+        <div style="text-align: center;" class="card-header">
+            <h3>Alumnos</h3>
+        </div>
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr class="text-center">
+                        <th>ID</th>
+                        <th>CONTENIDO</th>
+                        <th>NOMBRE</th>
+                        <th>TITULO</th>
+                        <th>ACCIONES</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let alumno of alumnos" class="text-center">
+                        <td>{{alumno.id}}</td>
+                        <td>{{alumno.contenido}}</td>
+                        <td>{{alumno.nombre}}</td>
+                        <td>{{alumno.titulo}}</td>
+                        <td>
+                            <button (click)="Editar(alumno)" class="btn btn-warning">Editar</button>
+                            <button class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="container col-md-6 ">
+    <div  class="card">
+        <div class="card-header">
+            <h4 style="text-align: center;">Agregar Informacion</h4>
+        </div>
+        <div class="card-body">
+            <form [formGroup]="gestionarAlumnoForm">
+                <div class="form-group ">
+                    <label for="contenido">Contenido</label>
+                    <input type="text" class="form-control" id="contenido" formControlName="contenido">
+                </div>
+                <div class="form-group  ">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" formControlName="nombre">
+                </div>
+
+                <div class="form-group  ">
+                    <label for="titulo">Titulo</label>
+                    <input type="text" class="form-control" id="titulo" formControlName="titulo">
+                </div>
+                <button (click)="Guardar()" class="btn btn-danger">Guardar</button>
+            </form>
+        </div>
+    </div>
+</div>
